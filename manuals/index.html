@@ -4,258 +4,100 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>受注・発注・マスタ情報管理 マニュアル</title>
-  <style>
-    :root {
-      --bg: #f6f8fb;
-      --card: #ffffff;
-      --text: #172033;
-      --muted: #667085;
-      --line: #e6eaf0;
-      --blue: #2ea7e0;
-      --blue-dark: #147db2;
-      --shadow: 0 14px 40px rgba(23, 32, 51, 0.08);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at top left, #e8f6fd 0, transparent 34rem), var(--bg);
-      line-height: 1.65;
-    }
-    header {
-      padding: 56px 24px 28px;
-      text-align: center;
-    }
-    header .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border: 1px solid #b8e2f5;
-      border-radius: 999px;
-      color: var(--blue-dark);
-      background: #eef9fe;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    h1 {
-      margin: 18px auto 10px;
-      max-width: 900px;
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-    }
-    .lead {
-      margin: 0 auto;
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-    main {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 20px 24px 64px;
-    }
-    section {
-      margin-top: 34px;
-    }
-    h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
-      letter-spacing: -0.02em;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .grid.two {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .card {
-      display: block;
-      min-height: 148px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.92);
-      box-shadow: var(--shadow);
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: #9ed8f0;
-      box-shadow: 0 18px 44px rgba(23, 32, 51, 0.12);
-    }
-    .card .kicker {
-      color: var(--blue-dark);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .card h3 {
-      margin: 8px 0 8px;
-      font-size: 20px;
-      line-height: 1.35;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .note {
-      margin-top: 24px;
-      padding: 18px 20px;
-      border: 1px solid #d9ecf7;
-      border-radius: 16px;
-      background: #f3fbff;
-      color: #31566a;
-      font-size: 14px;
-    }
-    footer {
-      padding: 28px 24px 42px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    @media (max-width: 860px) {
-      .grid,
-      .grid.two {
-        grid-template-columns: 1fr;
-      }
-      header {
-        padding-top: 36px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./manual-site.css">
 </head>
 <body>
-  <header>
-    <div class="badge">Manual Portal</div>
-    <h1>受注・発注・マスタ情報管理 マニュアル</h1>
-    <p class="lead">
-      Agentify から利用する受注管理、発注管理、マスタ情報管理の操作手順、権限説明、役割別クイック手順をまとめています。
-    </p>
-  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">A</span>
+        <span>
+          <strong>Agentify Manual</strong>
+          <small>受注・発注・マスタ情報管理</small>
+        </span>
+      </a>
 
-  <main>
-    <section>
-      <h2>基本マニュアル</h2>
-      <div class="grid">
-        <a class="card" href="./order-management-manual.md">
-          <div class="kicker">Order</div>
-          <h3>受注管理 操作マニュアル</h3>
-          <p>受注作成、請求作成、請求書印刷、入金登録、売掛台帳、AI抽出。</p>
-        </a>
-        <a class="card" href="./purchase-management-manual.md">
-          <div class="kicker">Purchase</div>
-          <h3>発注管理 操作マニュアル</h3>
-          <p>購買依頼、発注案件、発注書印刷、納品・検収、仕入、支払予定。</p>
-        </a>
-        <a class="card" href="./master-management-manual.md">
-          <div class="kicker">Master</div>
-          <h3>マスタ情報管理 操作マニュアル</h3>
-          <p>テナント、ユーザー、部門、ロール、権限設定、標準ロール適用。</p>
-        </a>
-      </div>
-    </section>
+      <nav class="nav" aria-label="マニュアルメニュー">
+        <p class="nav-label">基本マニュアル</p>
+        <a href="#/order-management-manual.md" data-doc="order-management-manual.md">受注管理</a>
+        <a href="#/purchase-management-manual.md" data-doc="purchase-management-manual.md">発注管理</a>
+        <a href="#/master-management-manual.md" data-doc="master-management-manual.md">マスタ情報管理</a>
 
-    <section>
-      <h2>権限・ロール</h2>
-      <div class="grid two">
-        <a class="card" href="./role-permission-guide.md">
-          <div class="kicker">Permission</div>
-          <h3>権限・ロール説明書</h3>
-          <p>標準ロール、推奨権限、職務分離、権限組み合わせの考え方。</p>
-        </a>
-        <a class="card" href="./role-based-operation-guide.md">
-          <div class="kicker">Role Guide</div>
-          <h3>ロール別操作ガイド</h3>
-          <p>ロールごとに見える画面、表示されるボタン、実行できない操作。</p>
-        </a>
-      </div>
-    </section>
+        <p class="nav-label">権限・ロール</p>
+        <a href="#/role-permission-guide.md" data-doc="role-permission-guide.md">権限・ロール説明書</a>
+        <a href="#/role-based-operation-guide.md" data-doc="role-based-operation-guide.md">ロール別操作ガイド</a>
 
-    <section>
-      <h2>役割別クイック手順</h2>
-      <div class="grid">
-        <a class="card" href="./quick-guides/order-sales-quick-guide.md">
-          <div class="kicker">Quick</div>
-          <h3>受注営業担当者向け</h3>
-          <p>受注作成、AI抽出、受注詳細確認。</p>
-        </a>
-        <a class="card" href="./quick-guides/order-accounting-quick-guide.md">
-          <div class="kicker">Quick</div>
-          <h3>受注経理担当者向け</h3>
-          <p>請求作成、請求書印刷、入金登録、売掛確認。</p>
-        </a>
-        <a class="card" href="./quick-guides/purchase-requester-quick-guide.md">
-          <div class="kicker">Quick</div>
-          <h3>購買依頼者向け</h3>
-          <p>購買依頼作成、申請、差戻し対応。</p>
-        </a>
-        <a class="card" href="./quick-guides/purchase-manager-quick-guide.md">
-          <div class="kicker">Quick</div>
-          <h3>購買担当・承認者向け</h3>
-          <p>発注案件作成、承認、発注登録、発注書印刷。</p>
-        </a>
-        <a class="card" href="./quick-guides/purchase-inspection-quick-guide.md">
-          <div class="kicker">Quick</div>
-          <h3>検収担当者向け</h3>
-          <p>納品確認、納品・検収詳細、検収登録。</p>
-        </a>
-        <a class="card" href="./quick-guides/purchase-accounting-quick-guide.md">
-          <div class="kicker">Quick</div>
-          <h3>発注経理担当者向け</h3>
-          <p>支払予定確認、支払方法変更、支払済み更新。</p>
-        </a>
-      </div>
-    </section>
+        <p class="nav-label">クイック手順</p>
+        <a href="#/quick-guides/order-sales-quick-guide.md" data-doc="quick-guides/order-sales-quick-guide.md">受注営業担当者向け</a>
+        <a href="#/quick-guides/order-accounting-quick-guide.md" data-doc="quick-guides/order-accounting-quick-guide.md">受注経理担当者向け</a>
+        <a href="#/quick-guides/purchase-requester-quick-guide.md" data-doc="quick-guides/purchase-requester-quick-guide.md">購買依頼者向け</a>
+        <a href="#/quick-guides/purchase-manager-quick-guide.md" data-doc="quick-guides/purchase-manager-quick-guide.md">購買担当・承認者向け</a>
+        <a href="#/quick-guides/purchase-inspection-quick-guide.md" data-doc="quick-guides/purchase-inspection-quick-guide.md">検収担当者向け</a>
+        <a href="#/quick-guides/purchase-accounting-quick-guide.md" data-doc="quick-guides/purchase-accounting-quick-guide.md">発注経理担当者向け</a>
 
-    <section>
-      <h2>管理用資料</h2>
-      <div class="grid two">
-        <a class="card" href="./README.md">
-          <div class="kicker">Index</div>
-          <h3>マニュアル一覧 README</h3>
-          <p>マニュアル構成、共通の利用開始手順、画像配置ルール。</p>
-        </a>
-        <a class="card" href="./screenshot-checklist.md">
-          <div class="kicker">Capture</div>
-          <h3>画面キャプチャチェックリスト</h3>
-          <p>マニュアルに差し込むスクリーンショットのファイル名と撮影対象。</p>
-        </a>
-      </div>
-    </section>
+        <p class="nav-label">管理用資料</p>
+        <a href="#/README.md" data-doc="README.md">マニュアル一覧</a>
+        <a href="#/screenshot-checklist.md" data-doc="screenshot-checklist.md">画面キャプチャチェックリスト</a>
+      </nav>
+    </aside>
 
-    <section>
-      <h2>ダウンロード</h2>
-      <div class="grid two">
-        <a class="card" href="./downloads/manuals-2026-06-17.zip" download>
-          <div class="kicker">Zip</div>
-          <h3>マニュアル一式をダウンロード</h3>
-          <p>HTML、Markdown、画像、クイック手順書をまとめたオフライン確認用パッケージです。</p>
-        </a>
-        <a class="card" href="./screenshot-checklist.md">
-          <div class="kicker">Capture</div>
-          <h3>スクリーンショット一覧</h3>
-          <p>差し替えが必要な画像ファイル名と撮影対象を確認できます。</p>
-        </a>
-      </div>
-    </section>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-button" type="button" aria-label="メニューを開く">☰</button>
+        <div class="crumb" id="breadcrumb">マニュアル一覧</div>
+        <div class="actions">
+          <a class="download" href="./downloads/manuals-2026-06-17-v2.zip" download>一式ダウンロード</a>
+        </div>
+      </header>
 
-    <div class="note">
-      このページは Cloudflare Pages などの静的ホスティングへ直接配置できる入口ページです。
-      Markdown ファイルを読みやすい HTML として表示したい場合は、次の段階で VitePress、Docusaurus、MkDocs などのドキュメント生成ツールへ移行してください。
-    </div>
-  </main>
+      <section id="home" class="home">
+        <div class="hero">
+          <span class="eyebrow">Manual Portal</span>
+          <h1>受注・発注・マスタ情報管理 マニュアル</h1>
+          <p>Agentify から利用する各アプリの操作手順、権限説明、役割別クイック手順をまとめています。</p>
+        </div>
 
-  <footer>
-    最終更新日: 2026-06-17
-  </footer>
+        <div class="section-title">
+          <span>基本マニュアル</span>
+          <small>業務全体を確認する場合はこちら</small>
+        </div>
+        <div class="card-grid">
+          <a class="doc-card accent-order" href="#/order-management-manual.md">
+            <span>Order</span>
+            <strong>受注管理 操作マニュアル</strong>
+            <p>受注作成、請求作成、請求書印刷、入金登録、売掛台帳、AI抽出。</p>
+          </a>
+          <a class="doc-card accent-purchase" href="#/purchase-management-manual.md">
+            <span>Purchase</span>
+            <strong>発注管理 操作マニュアル</strong>
+            <p>購買依頼、発注案件、発注書印刷、納品・検収、仕入、支払予定。</p>
+          </a>
+          <a class="doc-card accent-master" href="#/master-management-manual.md">
+            <span>Master</span>
+            <strong>マスタ情報管理 操作マニュアル</strong>
+            <p>テナント、ユーザー、部門、ロール、権限設定、標準ロール適用。</p>
+          </a>
+        </div>
+
+        <div class="section-title">
+          <span>役割別クイック手順</span>
+          <small>初回研修・日常業務向けの短い手順書</small>
+        </div>
+        <div class="quick-grid">
+          <a href="#/quick-guides/order-sales-quick-guide.md">受注営業担当者向け</a>
+          <a href="#/quick-guides/order-accounting-quick-guide.md">受注経理担当者向け</a>
+          <a href="#/quick-guides/purchase-requester-quick-guide.md">購買依頼者向け</a>
+          <a href="#/quick-guides/purchase-manager-quick-guide.md">購買担当・承認者向け</a>
+          <a href="#/quick-guides/purchase-inspection-quick-guide.md">検収担当者向け</a>
+          <a href="#/quick-guides/purchase-accounting-quick-guide.md">発注経理担当者向け</a>
+        </div>
+      </section>
+
+      <article id="document" class="document" hidden></article>
+    </main>
+  </div>
+
+  <div class="overlay" hidden></div>
+  <script src="./manual-site.js"></script>
 </body>
 </html>
