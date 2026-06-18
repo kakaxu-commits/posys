@@ -60,7 +60,7 @@
 
 ![支払済み確認](../assets/purchase/payment-complete-confirm.png)
 
-## 6. 困ったとき
+## 6. FAQ
 
 | 状況 | 対応 |
 | --- | --- |

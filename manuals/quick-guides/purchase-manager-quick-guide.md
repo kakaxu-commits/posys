@@ -81,7 +81,7 @@ AI抽出を使った場合も、仕入先、数量、単価、税額、合計金
 
 ![発注書印刷ボタン](../assets/purchase/purchase-order-print-button.png)
 
-## 7. 困ったとき
+## 7. FAQ
 
 | 状況 | 対応 |
 | --- | --- |
