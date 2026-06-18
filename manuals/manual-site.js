@@ -66,7 +66,13 @@ async function showDocument(path) {
     const response = await fetch(path, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const markdown = await response.text();
-    documentView.innerHTML = `<div class="doc-body">${renderMarkdown(markdown, path)}</div>`;
+    const rendered = renderMarkdown(markdown, path);
+    documentView.innerHTML = `
+      <div class="doc-layout">
+        <div class="doc-body">${rendered.html}</div>
+        ${renderToc(rendered.toc)}
+      </div>
+    `;
     documentView.scrollIntoView({ block: "start" });
   } catch (error) {
     documentView.innerHTML = `<div class="error">マニュアルを読み込めませんでした。URL またはファイル配置を確認してください。<br>${escapeHtml(String(error.message || error))}</div>`;
@@ -82,6 +88,7 @@ function setActive(path) {
 function renderMarkdown(markdown, currentPath) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const html = [];
+  const toc = [];
   let i = 0;
 
   while (i < lines.length) {
@@ -107,7 +114,10 @@ function renderMarkdown(markdown, currentPath) {
     const heading = line.match(/^(#{1,4})\s+(.+)$/);
     if (heading) {
       const level = heading[1].length;
-      html.push(`<h${level}>${inline(heading[2], currentPath)}</h${level}>`);
+      const rawTitle = heading[2].trim();
+      const id = uniqueSlug(rawTitle, toc);
+      if (level >= 2 && level <= 3) toc.push({ id, level, title: stripMarkdown(rawTitle) });
+      html.push(`<h${level} id="${id}">${inline(rawTitle, currentPath)}</h${level}>`);
       i += 1;
       continue;
     }
@@ -160,7 +170,19 @@ function renderMarkdown(markdown, currentPath) {
     html.push(`<p>${inline(para.join(" "), currentPath)}</p>`);
   }
 
-  return html.join("\n");
+  return { html: html.join("\n"), toc };
+}
+
+function renderToc(toc) {
+  if (!toc.length) return "";
+  return `
+    <aside class="toc" aria-label="ページ内目次">
+      <div class="toc-title">このページ</div>
+      <nav>
+        ${toc.map((item) => `<a class="toc-level-${item.level}" href="#${item.id}">${escapeHtml(item.title)}</a>`).join("")}
+      </nav>
+    </aside>
+  `;
 }
 
 function isTableStart(lines, index) {
@@ -219,4 +241,25 @@ function escapeHtml(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function stripMarkdown(value) {
+  return String(value)
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .trim();
+}
+
+function uniqueSlug(title, toc) {
+  const base = stripMarkdown(title)
+    .toLowerCase()
+    .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
+    .replace(/^-+|-+$/g, "") || "section";
+  const used = new Set(toc.map((item) => item.id));
+  if (!used.has(base)) return base;
+  let index = 2;
+  while (used.has(`${base}-${index}`)) index += 1;
+  return `${base}-${index}`;
 }
