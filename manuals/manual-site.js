@@ -2,6 +2,8 @@ const documents = new Map([
   ["order-management-manual.md", "受注管理 操作マニュアル"],
   ["purchase-management-manual.md", "発注管理 操作マニュアル"],
   ["master-management-manual.md", "マスタ情報管理 操作マニュアル"],
+  ["role-permission-guide.md", "権限・ロール説明"],
+  ["role-based-operation-guide.md", "ロール別の画面・ボタン"],
   ["quick-guides/order-sales-quick-guide.md", "受注営業担当者向け"],
   ["quick-guides/order-accounting-quick-guide.md", "受注経理担当者向け"],
   ["quick-guides/purchase-requester-quick-guide.md", "購買依頼者向け"],
@@ -33,12 +35,20 @@ window.addEventListener("hashchange", route);
 document.addEventListener("click", (event) => {
   const link = event.target.closest("a");
   if (!link) return;
+  if (link.closest(".toc")) {
+    event.preventDefault();
+    const id = link.getAttribute("href")?.slice(1);
+    const target = id ? document.getElementById(id) : null;
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
   if (link.hash?.startsWith("#/")) closeMenu();
 });
 
 route();
 
 async function route() {
+  if (location.hash && !location.hash.startsWith("#/")) return;
   const path = decodeURIComponent(location.hash.replace(/^#\//, ""));
   if (!path) {
     showHome();
