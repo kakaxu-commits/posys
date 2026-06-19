@@ -264,6 +264,7 @@ a { color: inherit; }
 .accent-order { border-top: 4px solid var(--blue); }
 .accent-purchase { border-top: 4px solid var(--green); }
 .accent-master { border-top: 4px solid var(--orange); }
+.accent-expense { border-top: 4px solid #0ea5a4; }
 .accent-role { border-top: 4px solid #7c3aed; }
 
 .quick-grid {

@@ -102,6 +102,34 @@
 | 30 | `assets/purchase/purchase-csv-export.png` | 発注系一覧のCSV出力ボタン |
 | 31 | `assets/purchase/purchase-notification-bell.png` | 発注管理の通知ベルを開いた状態 |
 
+## 経費精算
+
+| No. | 保存先 | 画面・状態 |
+| --- | --- | --- |
+| 1 | `assets/common/agentify-my-apps-expense.png` | マイアプリから経費精算を選択する画面 |
+| 2 | `assets/expense/expense-dashboard.png` | 経費精算ダッシュボード |
+| 3 | `assets/expense/expense-register-upload.png` | 経費申請登録のアップロード画面 |
+| 4 | `assets/expense/expense-register-reading.png` | 領収書・請求書の読取処理中画面 |
+| 5 | `assets/expense/expense-register-basic.png` | 経費申請登録の基本情報入力欄 |
+| 6 | `assets/expense/expense-register-block.png` | 領収書ブロックの経費情報確認欄 |
+| 7 | `assets/expense/expense-submit-confirm.png` | 経費申請提出前の確認ポップアップ |
+| 8 | `assets/expense/expense-list.png` | 経費申請一覧 |
+| 9 | `assets/expense/expense-list-actions.png` | 経費申請一覧の操作ボタン |
+| 10 | `assets/expense/expense-detail.png` | 経費申請詳細 |
+| 11 | `assets/expense/expense-history.png` | 承認・精算履歴タブ |
+| 12 | `assets/expense/expense-approval-list.png` | 承認・精算管理の承認待ちタブ |
+| 13 | `assets/expense/expense-approve-confirm.png` | 経費申請承認前の確認ポップアップ |
+| 14 | `assets/expense/expense-reject-confirm.png` | 経費申請差戻し理由入力ポップアップ |
+| 15 | `assets/expense/expense-settle-register-confirm.png` | 精算待ち登録前の確認ポップアップ |
+| 16 | `assets/expense/expense-settlement-list.png` | 承認・精算管理の精算待ちタブ |
+| 17 | `assets/expense/expense-settle-complete-confirm.png` | 精算済み登録前の確認ポップアップ |
+| 18 | `assets/expense/expense-freee-auth-button.png` | 経費精算画面の freee 認証ボタン |
+| 19 | `assets/expense/freee-login.jpg` | freee ログイン画面 |
+| 20 | `assets/expense/freee-authorization-confirm.png` | freee アプリ連携確認画面 |
+| 21 | `assets/expense/expense-excel-button.png` | 経費申請一覧の Excel 生成ボタン |
+| 22 | `assets/expense/expense-freee-button.png` | 経費申請一覧の freee 連携ボタン |
+| 23 | `assets/expense/expense-status-examples.png` | 経費申請ステータス表示例 |
+
 ## マスタ情報管理
 
 | No. | 保存先 | 画面・状態 |
