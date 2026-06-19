@@ -120,15 +120,14 @@
 | 12 | `assets/expense/expense-approval-list.png` | 承認・精算管理の承認待ちタブ |
 | 13 | `assets/expense/expense-approve-confirm.png` | 経費申請承認前の確認ポップアップ |
 | 14 | `assets/expense/expense-reject-confirm.png` | 経費申請差戻し理由入力ポップアップ |
-| 15 | `assets/expense/expense-settle-register-confirm.png` | 精算待ち登録前の確認ポップアップ |
-| 16 | `assets/expense/expense-settlement-list.png` | 承認・精算管理の精算待ちタブ |
-| 17 | `assets/expense/expense-settle-complete-confirm.png` | 精算済み登録前の確認ポップアップ |
-| 18 | `assets/expense/expense-freee-auth-button.png` | 経費精算画面の freee 認証ボタン |
-| 19 | `assets/expense/freee-login.jpg` | freee ログイン画面 |
-| 20 | `assets/expense/freee-authorization-confirm.png` | freee アプリ連携確認画面 |
-| 21 | `assets/expense/expense-excel-button.png` | 経費申請一覧の Excel 生成ボタン |
-| 22 | `assets/expense/expense-freee-button.png` | 経費申請一覧の freee 連携ボタン |
-| 23 | `assets/expense/expense-status-examples.png` | 経費申請ステータス表示例 |
+| 15 | `assets/expense/expense-settlement-list.png` | 承認・精算管理の精算待ちタブ |
+| 16 | `assets/expense/expense-settle-complete-confirm.png` | 精算済み登録前の確認ポップアップ |
+| 17 | `assets/expense/expense-freee-auth-button.png` | 経費精算画面の freee 認証ボタン |
+| 18 | `assets/expense/freee-login.jpg` | freee ログイン画面 |
+| 19 | `assets/expense/freee-authorization-confirm.png` | freee アプリ連携確認画面 |
+| 20 | `assets/expense/expense-excel-button.png` | 経費申請一覧の Excel 生成ボタン |
+| 21 | `assets/expense/expense-freee-button.png` | 経費申請一覧の freee 連携ボタン |
+| 22 | `assets/expense/expense-status-examples.png` | 経費申請ステータス表示例 |
 
 ## マスタ情報管理
 
