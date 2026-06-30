@@ -13,6 +13,7 @@
 | 3 | `assets/common/agentify-my-apps-order.png` | マイアプリから受注管理を選択する画面 |
 | 4 | `assets/common/agentify-my-apps-purchase.png` | マイアプリから発注管理を選択する画面 |
 | 5 | `assets/common/agentify-my-apps-master.png` | マイアプリからマスタ情報管理を選択する画面 |
+| 6 | `assets/common/agentify-my-apps-sfa.png` | マイアプリから営業支援（SFA）を選択する画面 |
 
 ## ロール別操作ガイド
 
@@ -128,6 +129,32 @@
 | 20 | `assets/expense/expense-excel-button.png` | 経費申請一覧の Excel 生成ボタン |
 | 21 | `assets/expense/expense-freee-button.png` | 経費申請一覧の freee 連携ボタン |
 | 22 | `assets/expense/expense-status-examples.png` | 経費申請ステータス表示例 |
+
+## 営業支援（SFA）
+
+詳細な撮影ポイントは [営業支援（SFA）スクリーンショット撮影ガイド](./sfa-screenshot-guide.md) を参照してください。
+
+| No. | 保存先 | 画面・状態 |
+| --- | --- | --- |
+| 1 | `assets/sfa/sfa-dashboard.png` | SFA ダッシュボード |
+| 2 | `assets/sfa/sfa-performance.png` | 営業実績 |
+| 3 | `assets/sfa/sfa-weekly-report.png` | 週次レポート生成後 |
+| 4 | `assets/sfa/sfa-opportunity-list.png` | 案件・商談一覧 |
+| 5 | `assets/sfa/sfa-opportunity-detail.png` | 案件詳細 |
+| 6 | `assets/sfa/sfa-opportunity-new.png` | 案件新規登録 |
+| 7 | `assets/sfa/sfa-activity-add.png` | 商談進捗の追加フォーム |
+| 8 | `assets/sfa/sfa-activity-history.png` | 活動履歴の展開状態 |
+| 9 | `assets/sfa/sfa-market-research.png` | 市場リサーチ |
+| 10 | `assets/sfa/sfa-market-deep-dive.png` | 市場リサーチ深掘り結果 |
+| 11 | `assets/sfa/sfa-pipeline.png` | パイプライン確認 |
+| 12 | `assets/sfa/sfa-campaign-new.png` | 販促活動登録フォーム |
+| 13 | `assets/sfa/sfa-campaign-list.png` | 販促活動一覧 |
+| 14 | `assets/sfa/sfa-lead-list.png` | 顧客一覧 |
+| 15 | `assets/sfa/sfa-lead-register.png` | 顧客登録 |
+| 16 | `assets/sfa/sfa-lead-add-contact.png` | 既存会社への担当者追加 |
+| 17 | `assets/sfa/sfa-lead-detail.png` | 顧客詳細 |
+| 18 | `assets/sfa/sfa-product-form.png` | 商材登録フォーム |
+| 19 | `assets/sfa/sfa-product-list.png` | 商材一覧 |
 
 ## マスタ情報管理
 

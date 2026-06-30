@@ -266,6 +266,7 @@ a { color: inherit; }
 .accent-master { border-top: 4px solid var(--orange); }
 .accent-expense { border-top: 4px solid #0ea5a4; }
 .accent-role { border-top: 4px solid #7c3aed; }
+.accent-sfa { border-top: 4px solid #2563eb; }
 
 .quick-grid {
   display: grid;
